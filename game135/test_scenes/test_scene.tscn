@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1bideat4wp1y"]
+
+[ext_resource type="Texture2D" uid="uid://igmlclf3kvwo" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_kf0xb"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="WarriorPurple" type="Sprite2D" parent="."]
+position = Vector2(577, 237)
+texture = ExtResource("1_kf0xb")

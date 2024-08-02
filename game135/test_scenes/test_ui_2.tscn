@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1p05j4qe3qkg"]
+
+[ext_resource type="PackedScene" uid="uid://ccbb51g5ugcy2" path="res://test_scenes/test_mob_spawning.tscn" id="1_wrl20"]
+
+[node name="TestUi2" type="Node2D"]
+
+[node name="TestMobSpawning" parent="." instance=ExtResource("1_wrl20")]
+position = Vector2(-3, 26)

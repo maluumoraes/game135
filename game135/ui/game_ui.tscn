@@ -1,0 +1,92 @@
+[gd_scene load_steps=10 format=3 uid="uid://cgq6pebwx1ikl"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_s1tnf"]
+[ext_resource type="Texture2D" uid="uid://bvipibwowelgs" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="1_su5wb"]
+[ext_resource type="Texture2D" uid="uid://jj3n3xjq2trc" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_gnw7s"]
+
+[sub_resource type="SystemFont" id="SystemFont_gdifw"]
+font_names = PackedStringArray("Jokerman")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_mim54"]
+font = SubResource("SystemFont_gdifw")
+font_size = 32
+outline_size = 6
+outline_color = Color(0.157765, 0.0712426, 0.00657991, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7uqf"]
+texture = ExtResource("1_su5wb")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss6sa"]
+atlas = ExtResource("3_gnw7s")
+region = Rect2(40, 48, 56, 56)
+
+[sub_resource type="SystemFont" id="SystemFont_ov6fg"]
+font_names = PackedStringArray("Jokerman")
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_kumcy"]
+font = SubResource("SystemFont_ov6fg")
+font_size = 32
+font_color = Color(0.361159, 0.209855, 0.102001, 1)
+outline_color = Color(1, 1, 1, 0)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_s1tnf")
+
+[node name="TimerLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -34.0
+offset_top = 52.0
+offset_right = 51.0
+offset_bottom = 91.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+text = "08:30"
+label_settings = SubResource("LabelSettings_mim54")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -276.0
+offset_top = 30.0
+offset_right = -26.0
+offset_bottom = 140.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_n7uqf")
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.105
+anchor_top = -0.243
+anchor_right = 1.105
+anchor_bottom = -0.243
+offset_left = -221.25
+offset_top = 34.73
+offset_right = -165.25
+offset_bottom = 94.73
+texture = SubResource("AtlasTexture_ss6sa")
+
+[node name="MeatLabel" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_top = 51.0
+offset_right = -67.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50"
+label_settings = SubResource("LabelSettings_kumcy")
